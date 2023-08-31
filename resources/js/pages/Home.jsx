@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useEffect, useState } from 'react';
 import DashboardComponent from '../components/DashboardComponent';
 import {withRouter} from "react-router-dom";
 class Home extends Component {
@@ -10,8 +10,8 @@ class Home extends Component {
   }
   render() {
     return (
-      <div class="pt-12 md:pt-20">
-        <DashboardComponent redirect={this.state.redirect}/>
+      <div class="pt-12 md:pt-20 pb-12 h-screen">
+        <DashboardComponent />
       </div>
     )
   } 

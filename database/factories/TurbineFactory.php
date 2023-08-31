@@ -19,9 +19,9 @@ class TurbineFactory extends Factory
         return [
           
                 'name' => $this->faker->Name,
-                'lat' => $this->faker->latitude,
-                'long' => $this->faker->longitude,
-          
+                'lat' => $this->faker->latitude(-10, 10),
+                'long' => $this->faker->longitude(-10, 10),
+               
         ];
     }
 }

@@ -10,7 +10,7 @@ class Login extends Component {
   }
   render() {
     return (
-      <div  class="pt-12 md:pt-20">
+      <div  className="pt-12 md:pt-20">
         <LoginContainer redirect={this.state.redirect} />
       </div>
     )

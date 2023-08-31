@@ -1,15 +1,21 @@
 import React, {Component} from 'react'
 import Header from './Header';
+import DroupdownFarmComponent from './DroupdownFarmComponent';
+import InspectionListViewComponent from './InspectionListViewComponent';
 import Footer from './Footer';
+
+
 class DashboardComponent extends Component {
   constructor() {
     super();
     this.state = {
       isLoggedIn: false,
-      user: {}
+      user: {},
+      farm: {value:null}
+      
     }
   }
-// check if user is authenticated and storing authentication data as states if true
+
   componentWillMount() {
     let state = localStorage["appState"];
     if (state) {
@@ -18,23 +24,38 @@ class DashboardComponent extends Component {
       this.setState({ isLoggedIn: AppState.isLoggedIn, user: AppState.user });
     }
   }
-// 4.1
+ 
+
+
+    handleChange=async(value) =>{
+    console.log('hiiiii');
+    await this.setState({ farm: value });
+    console.log(value);
+    console.log(this.state.farm.value);
+  }
+    
+
 render() {
+ 
     return (
        
-      <div>
+      <div class="h-screen">
         <Header userData={this.state.user} userIsLoggedIn={this.state.isLoggedIn}/>
-        <main role="main" class="w-full sm:w-2/3 md:w-3/4 pt-1 px-2">
-        <span>Whatever normally goes into the user dasboard page; the table below for instance</span> <br/>
-          <table className="table table-striped">
-            <tbody>
-              <tr>
-                <th scope="row ">Full Name</th>
-               <td>priyanka</td>
-              </tr>
-            </tbody>
-          </table>
-        </main>
+        
+        <div class="md:container  m-auto bg-gray-800 rounded-lg 
+                    shadow-lg text-center  py-20   inline-block" >
+        
+        <div class="content-center w-78 pr-80 pl-80  m-auto" >
+      <DroupdownFarmComponent userData={this.state.user} userIsLoggedIn={this.state.isLoggedIn} handleChange={ this.handleChange} farm={this.state.farm}/>
+   
+      <InspectionListViewComponent farmid={this.state.farm} userData={this.state.user} userIsLoggedIn={this.state.isLoggedIn} />
+   
+   
+
+      </div>
+           
+</div>
+       
          
         <Footer/>
       </div>
