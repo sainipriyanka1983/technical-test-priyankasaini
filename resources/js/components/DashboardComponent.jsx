@@ -20,7 +20,6 @@ class DashboardComponent extends Component {
     let state = localStorage["appState"];
     if (state) {
       let AppState = JSON.parse(state);
-      console.log(JSON.stringify(AppState));
       this.setState({ isLoggedIn: AppState.isLoggedIn, user: AppState.user });
     }
   }
@@ -28,10 +27,8 @@ class DashboardComponent extends Component {
 
 
     handleChange=async(value) =>{
-    console.log('hiiiii');
     await this.setState({ farm: value });
-    console.log(value);
-    console.log(this.state.farm.value);
+   
   }
     
 
@@ -47,12 +44,13 @@ render() {
         
         <div class="content-center w-78 pr-80 pl-80  m-auto" >
       <DroupdownFarmComponent userData={this.state.user} userIsLoggedIn={this.state.isLoggedIn} handleChange={ this.handleChange} farm={this.state.farm}/>
-   
+      </div>
+      <div class="content-center inline-block w-4/5 " >
       <InspectionListViewComponent farmid={this.state.farm} userData={this.state.user} userIsLoggedIn={this.state.isLoggedIn} />
    
-   
-
       </div>
+
+     
            
 </div>
        

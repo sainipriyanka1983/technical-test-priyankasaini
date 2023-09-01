@@ -22,7 +22,7 @@ class InspectionListViewComponent extends React.Component {
       }
 
       setShowModal(value,id){
-        console.log(value);
+       
         this.setState({showModal: value});
         this.setState({showModalid: id});
 
@@ -89,19 +89,19 @@ class InspectionListViewComponent extends React.Component {
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 relative mt-6  ">
         <thead class="text-xs text-gray-700 uppercase dark:text-gray-400 " >
             <tr>
-                <th scope="col" class="px-6 py-3 bg-yellow-50 dark:bg-yellow-800">
+                <th scope="col" class="px-6 py-3 bg-yellow-500 dark:bg-yellow-800">
                 Turbine name 
                 </th>
-                <th scope="col" class="px-6 py-3 bg-yellow-400">
+                <th scope="col" class="px-6 py-3 bg-yellow-200">
                 Component/Part
                 </th>
-                <th scope="col" class="px-6 py-3 bg-yellow-50 dark:bg-yellow-800">
+                <th scope="col" class="px-6 py-3 bg-yellow-500 dark:bg-yellow-800">
                 Grade
                 </th>
-                <th scope="col" class="px-6 py-3 bg-yellow-400">
+                <th scope="col" class="px-6 py-3 bg-yellow-200">
                 Inspected Date
                 </th>
-                <th scope="col" class="px-6 py-3 bg-yellow-50 dark:bg-yellow-800">
+                <th scope="col" class="px-6 py-3 bg-yellow-500 dark:bg-yellow-800">
                 Show
                 </th>
             </tr>

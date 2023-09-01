@@ -62,9 +62,9 @@ class DroupdownFarmComponent extends React.Component {
                   },
                 })}
            
-                placeholder={"Select Farm............."}
+                placeholder={"Select Farm"}
                 classNames={{
-                  placeholder: () => "text-left",
+                  placeholder: () => "text-left rounded-sm",
                   menuList: () => "text-left ",
                   singleValue: () => "text-left",
                   

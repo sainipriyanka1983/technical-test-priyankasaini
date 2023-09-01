@@ -7536,15 +7536,11 @@ var DashboardComponent = /*#__PURE__*/function (_Component) {
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) switch (_context.prev = _context.next) {
             case 0:
-              console.log('hiiiii');
-              _context.next = 3;
+              _context.next = 2;
               return _this.setState({
                 farm: value
               });
-            case 3:
-              console.log(value);
-              console.log(_this.state.farm.value);
-            case 5:
+            case 2:
             case "end":
               return _context.stop();
           }
@@ -7569,7 +7565,6 @@ var DashboardComponent = /*#__PURE__*/function (_Component) {
       var state = localStorage["appState"];
       if (state) {
         var AppState = JSON.parse(state);
-        console.log(JSON.stringify(AppState));
         this.setState({
           isLoggedIn: AppState.isLoggedIn,
           user: AppState.user
@@ -7584,21 +7579,24 @@ var DashboardComponent = /*#__PURE__*/function (_Component) {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
           userData: this.state.user,
           userIsLoggedIn: this.state.isLoggedIn
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           "class": "md:container  m-auto bg-gray-800 rounded-lg  shadow-lg text-center  py-20   inline-block",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             "class": "content-center w-78 pr-80 pl-80  m-auto",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_DroupdownFarmComponent__WEBPACK_IMPORTED_MODULE_2__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_DroupdownFarmComponent__WEBPACK_IMPORTED_MODULE_2__["default"], {
               userData: this.state.user,
               userIsLoggedIn: this.state.isLoggedIn,
               handleChange: this.handleChange,
               farm: this.state.farm
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_InspectionListViewComponent__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            "class": "content-center inline-block w-4/5 ",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_InspectionListViewComponent__WEBPACK_IMPORTED_MODULE_3__["default"], {
               farmid: this.state.farm,
               userData: this.state.user,
               userIsLoggedIn: this.state.isLoggedIn
-            })]
-          })
+            })
+          })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], {})]
       });
     }
@@ -7719,10 +7717,10 @@ var DroupdownFarmComponent = /*#__PURE__*/function (_React$Component) {
               })
             });
           },
-          placeholder: "Select Farm.............",
+          placeholder: "Select Farm",
           classNames: {
             placeholder: function placeholder() {
-              return "text-left";
+              return "text-left rounded-sm";
             },
             menuList: function menuList() {
               return "text-left ";
@@ -7969,7 +7967,6 @@ var InspectionListViewComponent = /*#__PURE__*/function (_React$Component) {
   _createClass(InspectionListViewComponent, [{
     key: "setShowModal",
     value: function setShowModal(value, id) {
-      console.log(value);
       this.setState({
         showModal: value
       });
@@ -8097,23 +8094,23 @@ var InspectionListViewComponent = /*#__PURE__*/function (_React$Component) {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
                 scope: "col",
-                "class": "px-6 py-3 bg-yellow-50 dark:bg-yellow-800",
+                "class": "px-6 py-3 bg-yellow-500 dark:bg-yellow-800",
                 children: "Turbine name"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
                 scope: "col",
-                "class": "px-6 py-3 bg-yellow-400",
+                "class": "px-6 py-3 bg-yellow-200",
                 children: "Component/Part"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
                 scope: "col",
-                "class": "px-6 py-3 bg-yellow-50 dark:bg-yellow-800",
+                "class": "px-6 py-3 bg-yellow-500 dark:bg-yellow-800",
                 children: "Grade"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
                 scope: "col",
-                "class": "px-6 py-3 bg-yellow-400",
+                "class": "px-6 py-3 bg-yellow-200",
                 children: "Inspected Date"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
                 scope: "col",
-                "class": "px-6 py-3 bg-yellow-50 dark:bg-yellow-800",
+                "class": "px-6 py-3 bg-yellow-500 dark:bg-yellow-800",
                 children: "Show"
               })]
             })
