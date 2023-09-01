@@ -1,5 +1,5 @@
 import React, {Component,input,button} from 'react';
-import {Link, withRouter} from 'react-router-dom';
+import {Link, withRouter,Route} from 'react-router-dom';
 
 class Header extends Component {
     constructor(props) {
@@ -9,6 +9,16 @@ class Header extends Component {
             isLoggedIn: props.userIsLoggedIn
           };
     
+      }
+      
+      componentWillMount() {
+        
+        
+          if (!this.state.isLoggedIn) {
+            
+            this.props.history.push('/');
+          }
+      
       }
 
         logout = () => {

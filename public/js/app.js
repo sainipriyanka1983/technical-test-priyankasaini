@@ -7832,6 +7832,13 @@ var Header = /*#__PURE__*/function (_Component) {
     return _this;
   }
   _createClass(Header, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      if (!this.state.isLoggedIn) {
+        this.props.history.push('/');
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       var aStyle = {
